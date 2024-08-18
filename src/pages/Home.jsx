@@ -8,6 +8,7 @@ import Bretch from "../components/Home/Bretch";
 import Offer from "../components/Home/Offer";
 import MySlider from "../components/Home/Slider";
 import MySlide from "../components/Home/SliderMd";
+import OfferForm from "../components/Home/OfferForm";
 
 
 export default function Home() {
@@ -22,6 +23,9 @@ export default function Home() {
     <Offer/>
     <MySlider/>
     <MySlide/>
+    <OfferForm/>
+    <hr className="w-full h-[2px] bg-main" />
+    {/* <Footer/> */}
     </div>
   );
 }

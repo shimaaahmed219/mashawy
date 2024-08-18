@@ -12,7 +12,8 @@ export default {
         Georgian:["Noto_Sans_Georgian"]
       },
       colors:{
-        main:"#846a06"
+        main:"#846a06",
+        trasnsparent:"#0000004a"
       },
       screens: {
         "phon":"499px"

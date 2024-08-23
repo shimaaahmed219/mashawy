@@ -12,17 +12,17 @@ export default function Offer() {
             <h1 className=" lg:text-[1.75rem] text-center text-[1.2rem] font-domine text-main ">
               Steak and Side offer
             </h1>
-            <p className="font-Georgian lg:text-[1rem] text-[15px] my-2 text-center">
-              <p>
-                <h6>Our feel-good menu of the summer.</h6>
+            <div className="font-Georgian lg:text-[1rem] text-[15px] my-2 text-center">
+              <div>
+                <p>Our feel-good menu of the summer.</p>
                 Loose linen. White wine. Best friends. And a delicious plate of
                 food. Who doesn’t love a summer lunch in the city?
-              </p>
+              </div>
               <p className="mt-5">
                 We’re channelling all of the above this summer with a deal on
                 ‘till September: choose your main, then choose your side.
               </p>
-            </p>
+            </div>
           </div>
         </div>
         <div className="flex justify-center items-center mt-10 ">

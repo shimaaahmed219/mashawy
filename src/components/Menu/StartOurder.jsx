@@ -4,7 +4,7 @@ export default function StartOurder() {
       <h1 className="font-tinos text-[35px] text-main">Our Menu</h1>
       <p className="font-Anek font-semibold text-main text-[20ppx] tracking-widest">
         Ready to Order? Click “Start an Order” to place an order for
-        <h6>pickup or delivery!</h6>
+        <span>pickup or delivery!</span>
       </p>
       <button className="p-2 lg:my-0 mb-4 bg-main text-white capitalize font-tinos border-none  w-[200px] text-[20px] px-5 font-bold">
         start an order

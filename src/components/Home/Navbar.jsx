@@ -68,7 +68,7 @@ function Navbar() {
         )}
       
         <div className=" lg:w-3/6 md:w-2/6  phon:w-3/6 w-4/6">
-          <ul className="flex justify-between xl:w-[40%] w-[50%] lg:ms-auto items-center mx-5">
+          <ul className=" md:flex hidden justify-between xl:w-[40%] w-[50%] lg:ms-auto items-center mx-5">
             <li>uk</li>
             <li>shop</li>
             <li>
@@ -101,7 +101,7 @@ function Navbar() {
         <hr className="w-ful h-[2px] bg-main mx-0" />
         <ul className="space-y-6 text-[30px] text-main mt-[70px] w-full h-full text-center">
           <li>
-            <Link className="hover:border-b-2 hover:border-main">Home</Link>
+            <Link to="/" className="hover:border-b-2 hover:border-main">Home</Link>
           </li>
           <li>
             <Link className="hover:border-b-2 hover:border-main">About</Link>
@@ -110,7 +110,7 @@ function Navbar() {
             <Link className="hover:border-b-2 hover:border-main">Service</Link>
           </li>
           <li>
-            <Link className="hover:border-b-2 hover:border-main">Menu</Link>
+            <Link to="/menu" className="hover:border-b-2 hover:border-main">Menu</Link>
           </li>
         </ul>
       </div>

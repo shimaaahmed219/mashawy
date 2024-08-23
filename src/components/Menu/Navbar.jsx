@@ -1,43 +1,70 @@
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { FaList } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
-import { useState } from "react";
-
-export default function Navbar() {
+import { FaUserCircle } from "react-icons/fa";
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showText, setShowText] = useState(false);
+  const  location = useLocation()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowText(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
-    <>
-      <div className="absolute transition-all duration-300 z-50 hover:bg-white capitalize text-[15px] text-white hover:text-main items-center font-domine w-full  py-5  flex ">
+    <nav
+      className={`fixed z-50 top-0 left-0 w-full h-[70px]   transition-all duration-300`}
+    >
+      <div className="absolute transition-all duration-300  z-50 bg-white capitalize text-[15px] border-main border-b-2 text-main items-center font-domine w-full  py-5  flex ">
         <div className="w-3/6 lg:block hidden">
-          <ul className=" mx-3 flex justify-between w-3/6 ">
+          <ul className=" mx-3 flex justify-between xl:w-3/6 w-4/6 ">
             <li>
-              <Link to="/" className="hover:text-main">Home</Link>
+              <Link to="/" className={`${location.pathname ==="/" ? "border-2  border-main":""}`}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link className="hover:text-main">about</Link>
+              <Link className={`${location.pathname ==="/about" ?"border-b-2 border-main":""}`}>about</Link>
             </li>
             <li>
-              <Link className="hover:text-main">service</Link>
+              <Link className={`${location.pathname ==="/service" ?"border-b-2 border-main":""}`}>service</Link>
             </li>
             <li>
-              <Link to="/menu" className="hover:text-main">menue</Link>
+              <Link to="/menu" className={`${location.pathname ==="/menu" ?"border-b-2 border-main":""}`}>
+                menue
+              </Link>
             </li>
           </ul>
         </div>
+
+        {showText && (
+          <div>
+            <h1 className=" lg:flex hidden justify-center font-domine uppercase tracking-[15px] items-center w-full xl:h-full   md:text-[30px] sm:text-[20px] text-[20px] phon:text-[30px] text-main ">
+              mashawy
+            </h1>
+          </div>
+        )}
+
         <div className=" lg:w-3/6 md:w-2/6  phon:w-3/6 w-4/6">
-          <ul className="flex justify-between xl:w-[40%] w-[50%] lg:ms-auto items-center mx-5">
+          <ul className="flex justify-between xl:w-[40%] w-[60%] lg:ms-auto items-center mx-5">
             <li>uk</li>
             <li>shop</li>
+            
             <li>
               <button className="  py-1 w-[150px] border-main text-[20px] border-[2px] rounded-[10px]   lg:flex hidden justify-center items-center">
                 book table
               </button>
             </li>
           </ul>
+         
         </div>
         <div className="ms-auto mx-5 lg:hidden block ">
           <button onClick={toggleMenu}>
@@ -75,6 +102,8 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-    </>
+    </nav>
   );
 }
+
+export default Navbar;

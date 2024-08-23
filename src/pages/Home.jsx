@@ -9,12 +9,15 @@ import Offer from "../components/Home/Offer";
 import MySlider from "../components/Home/Slider";
 import MySlide from "../components/Home/SliderMd";
 import OfferForm from "../components/Home/OfferForm";
+import Navbar from "../components/Home/Navbar";
+
 
 
 export default function Home() {
   return (
     <div className="w-full h-screen ">
     <Header/>
+    <Navbar/>
     <GreetingSection/>
     <OuerFood/>
     <BestSteak/>

@@ -10,7 +10,8 @@ export default {
         domine:["Domine"],
         Anek:["Anek Gurmukhi"],
         Georgian:["Noto_Sans_Georgian"],
-        tinos:['Tinos']
+        tinos:['Tinos'],
+        Dancing:["Dancing Script"]
 
       },
       colors:{
@@ -19,7 +20,8 @@ export default {
         categores:"#f9f7f3",
         trasnsparent:"#0000004a",
         bg:"#dad5ae",
-        text:"#604b33"
+        text:"#604b33",
+        footer:"#1c1c21",
 
       },
       screens: {

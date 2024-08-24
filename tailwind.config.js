@@ -16,7 +16,7 @@ export default {
       colors:{
         main:"#846a06",
         second:"#4a3700",
-        categores:"#fdffeb",
+        categores:"#f9f7f3",
         trasnsparent:"#0000004a",
         bg:"#dad5ae",
         text:"#604b33"

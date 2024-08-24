@@ -71,12 +71,12 @@ export default function Category() {
         } md:hidden block`}
         style={{ transition: "background-color 0.3s ease", zIndex: 100 }}
       >
-        <ul className="flex  justify-between lg:text-[18px]  font-bold items-center min-h-[80px] phone:px-5 px-1 text-main">
+        <ul className="flex  justify-between lg:text-[18px]  font-bold items-center min-h-[80px] phon:px-5 px-1 text-main">
           {visibleCategories.map((category) => (
             <li
               key={category.id}
               onClick={() => handleCategoryClick(category.id)}
-              className="cursor-pointer phone:text-[16px] font-bold text-[12px] hover:text-gray-600"
+              className="cursor-pointer phon:text-[16px] font-bold text-[12px] hover:text-gray-600"
             >
               {category.name}
             </li>
@@ -84,7 +84,7 @@ export default function Category() {
           {categories.length > visibleCategories.length && (
             <li
               onClick={handleMoreClick}
-              className="cursor-pointer flex items-center text-[13px] phone:text-[16px] hover:text-gray-600"
+              className="cursor-pointer flex items-center text-[13px] phon:text-[16px] hover:text-gray-600"
             >
               More
               <MdNavigateNext/>
@@ -94,24 +94,24 @@ export default function Category() {
       </div>
       {selectedCategory && (
         <div>
-          <ul className="grid md:grid-cols-2 gap-x-10 phon:px-10 px-2 py-5 bg-categores gap-y-5 ">
+          <ul className="grid md:grid-cols-2 gap-x-10 phon:px-10 px-2 py-5 phon:bg-categores gap-y-5 ">
             {items
               .filter((item) => item.categoryId === selectedCategory)
               .map((item) => (
                 <li
-                  className="bg-white border-[1px] border-main justify-between lg:h-[180px] flex mb-4 rounded shadow cursor-pointer"
+                  className="bg-white border-[1px]  border-main justify-between lg:h-[180px] flex mb-4 rounded shadow cursor-pointer"
                   key={item.id}
                   onClick={() => handleItemClick(item.id)}
                 >
                 
                   <div>
-                    <h1 className="p-3 phon:text-[20px] text-main font-bord">
+                    <h1 className="phon:p-3  phon:font-normal font-semibold p-1 py-2 phon:text-[20px] text-[14px] text-main font-bord">
                       {item.name}
                     </h1>
                     <p className="phon:p-3 px-2 font-Anek phon:block hidden">{item.description.substring(0,60)}</p>
                     <p className="phon:p-3 px-1 font-Anek block phon:hidden">{item.description.substring(0,30)}..</p>
                   
-                    <span className="phon:p-3 px-1 font-semibold">
+                    <span className="phon:p-3 py-2 px-1 font-semibold">
                       {item.price}
                       <span className="uppercase font-bold mx-1">egp</span>
                     </span>

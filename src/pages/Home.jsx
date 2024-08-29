@@ -10,7 +10,6 @@ import MySlider from "../components/Home/Slider";
 import MySlide from "../components/Home/SliderMd";
 import OfferForm from "../components/Home/OfferForm";
 import Navbar from "../components/Home/Navbar";
-import Footer from "../components/Footer";
 
 
 
@@ -29,7 +28,7 @@ export default function Home() {
     <MySlide/>
     <OfferForm/>
     <hr className="w-full h-[2px] bg-main" />
-    <Footer/>
+   
     </div>
   );
 }

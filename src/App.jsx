@@ -4,7 +4,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Menue from "./pages/Menue";
 import ProductDetails from "./pages/ProductDetails";
-import Login from "./pages/Login";
+// import Login from "./pages/Login";
 
 function App() {
   const route = createBrowserRouter(
@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menue />} />
         <Route path="/product/:id" element={<ProductDetails />} />
-        <Route path="login" element={<Login/>} />
+        {/* <Route path="login" element={<Login/>} /> */}
       </Route>
     )
   );

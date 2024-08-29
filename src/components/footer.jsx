@@ -11,7 +11,7 @@ export default function Footer() {
           className="   font-Dancing text-[40px] uppercase hover:text-main hover:py-2 cursor-pointer"
           to="/"
         >
-          mashawy
+          mashawyz
         </Link>
         <hr className="w-[100%] h-[1px] mt-4 bg-white border-none" />
       </div>

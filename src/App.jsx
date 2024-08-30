@@ -1,27 +1,32 @@
-import { createBrowserRouter } from "react-router-dom";
-import { Route, RouterProvider, createRoutesFromElements } from "react-router";
+import { useEffect } from "react";
+import { useLocation, BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Menue from "./pages/Menue";
 import ProductDetails from "./pages/ProductDetails";
 // import Login from "./pages/Login";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
-  const route = createBrowserRouter(
-    createRoutesFromElements(
-      <Route>
+  return (
+    <Router>
+      <ScrollToTop />
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menue />} />
         <Route path="/product/:id" element={<ProductDetails />} />
-        {/* <Route path="login" element={<Login/>} /> */}
-      </Route>
-    )
-  );
-
-  return (
-    <>
-      <RouterProvider router={route} />
-    </>
+        {/* <Route path="login" element={<Login />} /> */}
+      </Routes>
+    </Router>
   );
 }
 

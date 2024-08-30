@@ -96,7 +96,7 @@ export default function ProductDetails() {
       </div>
       {showOrdedr ? (
         <div className="absolute top-0 w-full right-0 z-50">
-          <StartOrder cart={cart} setShowOrder={setShowOrder} setCart={setCart} />
+          <StartOrder cart={cart} setShowOrder={setShowOrder}  setCart={setCart} />
         </div>
       ) : (
         ""

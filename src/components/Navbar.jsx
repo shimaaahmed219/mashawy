@@ -11,11 +11,13 @@ export default function Navbar() {
   };
   return (
     <>
-      <div className="absolute transition-all  duration-300 z-50 hover:z-50 capitalize text-[15px] text-white hover:text-main items-center font-domine w-full  py-5  flex ">
+      <div className="absolute transition-all z-50  duration-300  hover:z-50 capitalize text-[15px] text-white hover:bg-white hover:text-main items-center font-domine w-full  py-5  flex ">
         <div className="w-3/6 lg:block hidden">
           <ul className=" mx-3 flex justify-between w-3/6 ">
             <li className="hover:text-main cursor-pointer">
-              <Link to="/" className="">Home</Link>
+              <Link to="/" className="">
+                Home
+              </Link>
             </li>
             <li>
               <Link className="hover:text-main cursor-pointer">about</Link>
@@ -24,7 +26,9 @@ export default function Navbar() {
               <Link className="hover:text-main cursor-pointer">service</Link>
             </li>
             <li>
-              <Link to="/menu" className="hover:text-main cursor-pointer">menue</Link>
+              <Link to="/menu" className="hover:text-main cursor-pointer">
+                menue
+              </Link>
             </li>
           </ul>
         </div>

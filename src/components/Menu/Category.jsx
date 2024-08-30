@@ -12,6 +12,7 @@ export default function Category() {
   const navigate = useNavigate();
   const categoryRef = useRef(null);
 
+
   const handleCategoryClick = (categoryId) => {
     setSelectedCategory(categoryId);
   };
@@ -20,6 +21,8 @@ export default function Category() {
     navigate(`/product/${id}`);
   };
 
+ 
+  
   useEffect(() => {
     const handleScroll = () => {
       if (categoryRef.current) {
@@ -108,8 +111,8 @@ export default function Category() {
                     <h1 className="phon:p-3  phon:font-normal font-semibold p-1 py-2 phon:text-[20px] text-[14px] text-main font-bord">
                       {item.name}
                     </h1>
-                    <p className="phon:p-3 px-2 font-Anek phon:block hidden">{item.description.substring(0,60)}</p>
-                    <p className="phon:p-3 px-1 font-Anek block phon:hidden">{item.description.substring(0,30)}..</p>
+                    <p className="phon:p-3 px-2 font-Anek phon:block hidden">{item.description?.substring(0,60)}</p>
+                    <p className="phon:p-3 px-1 font-Anek block phon:hidden">{item.description?.substring(0,30)}..</p>
                   
                     <span className="phon:p-3 py-2 px-1 font-semibold">
                       {item.price}

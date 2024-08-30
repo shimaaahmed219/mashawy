@@ -19,6 +19,7 @@ export default {
         second:"#4a3700",
         categores:"#f9f7f3",
         trasnsparent:"#0000004a",
+        tr:"#00000076",
         bg:"#dad5ae",
         text:"#604b33",
         footer:"#1c1c21",

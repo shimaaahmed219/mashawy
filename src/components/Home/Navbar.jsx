@@ -33,7 +33,7 @@ function Navbar() {
   }, []);
   return (
     <nav
-      className={`fixed z-50 top-0 left-0 w-full   transition-all duration-300   ${
+      className={`fixed z-40 top-0 left-0 w-full   transition-all duration-300   ${
         show ? "opacity-100" : "opacity-0"
       }`}
     >

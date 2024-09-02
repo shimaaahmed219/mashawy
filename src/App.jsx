@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Menue from "./pages/Menue";
 import ProductDetails from "./pages/ProductDetails";
+import About from "./pages/About";
 // import Login from "./pages/Login";
 
 function ScrollToTop() {
@@ -24,7 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menue />} />
         <Route path="/product/:id" element={<ProductDetails />} />
-        {/* <Route path="login" element={<Login />} /> */}
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );

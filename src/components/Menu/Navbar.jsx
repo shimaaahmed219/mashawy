@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaList } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
-import { FaUserCircle } from "react-icons/fa";
+// import { FaUserCircle } from "react-icons/fa";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showText, setShowText] = useState(false);
@@ -32,10 +32,10 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className={`${location.pathname ==="/about" ?"border-b-2 border-main":""}`}>about</Link>
+              <Link to="/about" className={`${location.pathname ==="/about" ?"border-b-2 border-main":""}`}>about</Link>
             </li>
             <li>
-              <Link className={`${location.pathname ==="/service" ?"border-b-2 border-main":""}`}>service</Link>
+              <Link to="/service" className={`${location.pathname ==="/service" ?"border-b-2 border-main":""}`}>service</Link>
             </li>
             <li>
               <Link to="/menu" className={`${location.pathname ==="/menu" ?"border-b-2 border-main":""}`}>
@@ -92,10 +92,10 @@ function Navbar() {
             <Link to="/" className="hover:border-b-2 hover:border-main">Home</Link>
           </li>
           <li>
-            <Link className="hover:border-b-2 hover:border-main">About</Link>
+            <Link to="about" className="hover:border-b-2 hover:border-main">About</Link>
           </li>
           <li>
-            <Link className="hover:border-b-2 hover:border-main">Service</Link>
+            <Link to="service"  className="hover:border-b-2 hover:border-main">Service</Link>
           </li>
           <li>
             <Link to="/menu" className="hover:border-b-2 hover:border-main">Menu</Link>

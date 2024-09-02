@@ -20,9 +20,10 @@ export default function OuerFood() {
       </div>
       <div className="">
         <img
-          className="h-[290px] w-full"
+          className="h-[290px] w-full bg-cover"
           src="https://thehawksmoor.com/wp-content/uploads/2024/06/SHARING_STEAK-115-CROP-X4-1.jpg"
         />
+      
       </div>
     </div>
   );

@@ -20,10 +20,10 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="hover:text-main cursor-pointer">about</Link>
+              <Link to="/about" className="hover:text-main cursor-pointer">about</Link>
             </li>
             <li>
-              <Link className="hover:text-main cursor-pointer">service</Link>
+              <Link  to="/service" className="hover:text-main cursor-pointer">service</Link>
             </li>
             <li>
               <Link to="/menu" className="hover:text-main cursor-pointer">
@@ -66,16 +66,16 @@ export default function Navbar() {
         <hr className="w-ful h-[2px] bg-main mx-0" />
         <ul className="space-y-6 text-[30px] text-main mt-[70px] w-full h-full text-center">
           <li>
-            <Link className="hover:border-b-2 hover:border-main">Home</Link>
+            <Link  to="/" className="hover:border-b-2 hover:border-main">Home</Link>
           </li>
           <li>
-            <Link className="hover:border-b-2 hover:border-main">About</Link>
+            <Link  to="/about" className="hover:border-b-2 hover:border-main">About</Link>
           </li>
           <li>
-            <Link className="hover:border-b-2 hover:border-main">Service</Link>
+            <Link  to="/service" className="hover:border-b-2 hover:border-main">Service</Link>
           </li>
           <li>
-            <Link className="hover:border-b-2 hover:border-main">Menu</Link>
+            <Link  to="/menu" className="hover:border-b-2 hover:border-main">Menu</Link>
           </li>
         </ul>
       </div>

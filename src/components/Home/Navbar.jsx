@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
+import { Link, useLocation } from "react-router-dom";
 import { FaList } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 function Navbar() {
   const [show, setShow] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showText, setShowText] = useState(false);
-
+  const location = useLocation();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -27,9 +28,9 @@ function Navbar() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowText(true);
-    }, 3000); 
+    }, 3000);
 
-    return () => clearTimeout(timer); 
+    return () => clearTimeout(timer);
   }, []);
   return (
     <nav
@@ -40,33 +41,33 @@ function Navbar() {
       <div className="absolute transition-all duration-300 z-50 bg-white capitalize text-[15px] border-main border-b-2 text-main items-center font-domine w-full  py-5  flex ">
         <div className="w-3/6 lg:block hidden">
           <ul className=" mx-3 flex justify-between w-3/6 ">
-            <li>
-              <Link to="/" className="hover:text-main">
+          <li>
+              <Link to="/" className={`${location.pathname ==="/" ? "border-b-2  border-main":""}`}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-main">about</Link>
+              <Link to="/about" className={`${location.pathname ==="/about" ?"border-b-2 border-main":""}`}>about</Link>
             </li>
             <li>
-              <Link  to="/service" className="hover:text-main">service</Link>
+              <Link to="/service" className={`${location.pathname ==="/service" ?"border-b-2 border-main":""}`}>service</Link>
             </li>
             <li>
-              <Link to="/menu" className="hover:text-main">
+              <Link to="/menu" className={`${location.pathname ==="/menu" ?"border-b-2 border-main":""}`}>
                 menue
               </Link>
             </li>
           </ul>
         </div>
-       
+
         {showText && (
-             <div>
-          <h1 className="  flex justify-center font-domine uppercase tracking-[15px] items-center w-full xl:h-full md:h-[500px]  md:text-[30px] sm:text-[20px] text-[20px] phon:text-[30px] text-main ">
-            mashawy
-          </h1>
+          <div>
+            <h1 className="  flex justify-center font-domine uppercase tracking-[15px] items-center w-full xl:h-full md:h-[500px]  md:text-[30px] sm:text-[20px] text-[20px] phon:text-[30px] text-main ">
+              mashawy
+            </h1>
           </div>
         )}
-      
+
         <div className=" lg:w-3/6 md:w-2/6  phon:w-3/6 w-4/6">
           <ul className=" md:flex hidden justify-between xl:w-[40%] w-[50%] lg:ms-auto items-center mx-5">
             <li>uk</li>
@@ -101,16 +102,24 @@ function Navbar() {
         <hr className="w-ful h-[2px] bg-main mx-0" />
         <ul className="space-y-6 text-[30px] text-main mt-[70px] w-full h-full text-center">
           <li>
-            <Link to="/" className="hover:border-b-2 hover:border-main">Home</Link>
+            <Link to="/" className="hover:border-b-2 hover:border-main">
+              Home
+            </Link>
           </li>
           <li>
-            <Link  to="/about" className="hover:border-b-2 hover:border-main">About</Link>
+            <Link to="/about" className="hover:border-b-2 hover:border-main">
+              About
+            </Link>
           </li>
           <li>
-            <Link  to="/service" className="hover:border-b-2 hover:border-main">Service</Link>
+            <Link to="/service" className="hover:border-b-2 hover:border-main">
+              Service
+            </Link>
           </li>
           <li>
-            <Link to="/menu" className="hover:border-b-2 hover:border-main">Menu</Link>
+            <Link to="/menu" className="hover:border-b-2 hover:border-main">
+              Menu
+            </Link>
           </li>
         </ul>
       </div>
